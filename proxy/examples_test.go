@@ -8,7 +8,7 @@ import (
 	"log"
 	"strings"
 
-	"github.com/mwitkow/grpc-proxy/proxy"
+	"github.com/adamthesax/grpc-proxy/proxy"
 
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/codes"
@@ -34,7 +34,7 @@ func ExampleRegisterService() {
 	server := grpc.NewServer()
 	// Register a TestService with 4 of its methods explicitly.
 	proxy.RegisterService(server, director,
-		"mwitkow.testproto.TestService",
+		"adamthesax.testproto.TestService",
 		"PingEmpty", "Ping", "PingError", "PingList")
 }
 
