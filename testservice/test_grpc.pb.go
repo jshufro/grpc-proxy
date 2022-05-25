@@ -36,7 +36,7 @@ func NewTestServiceClient(cc grpc.ClientConnInterface) TestServiceClient {
 
 func (c *testServiceClient) PingEmpty(ctx context.Context, in *emptypb.Empty, opts ...grpc.CallOption) (*PingResponse, error) {
 	out := new(PingResponse)
-	err := c.cc.Invoke(ctx, "/mwitkow.testproto.TestService/PingEmpty", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/adamthesax.testproto.TestService/PingEmpty", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -45,7 +45,7 @@ func (c *testServiceClient) PingEmpty(ctx context.Context, in *emptypb.Empty, op
 
 func (c *testServiceClient) Ping(ctx context.Context, in *PingRequest, opts ...grpc.CallOption) (*PingResponse, error) {
 	out := new(PingResponse)
-	err := c.cc.Invoke(ctx, "/mwitkow.testproto.TestService/Ping", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/adamthesax.testproto.TestService/Ping", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -54,7 +54,7 @@ func (c *testServiceClient) Ping(ctx context.Context, in *PingRequest, opts ...g
 
 func (c *testServiceClient) PingError(ctx context.Context, in *PingRequest, opts ...grpc.CallOption) (*emptypb.Empty, error) {
 	out := new(emptypb.Empty)
-	err := c.cc.Invoke(ctx, "/mwitkow.testproto.TestService/PingError", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/adamthesax.testproto.TestService/PingError", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -62,7 +62,7 @@ func (c *testServiceClient) PingError(ctx context.Context, in *PingRequest, opts
 }
 
 func (c *testServiceClient) PingList(ctx context.Context, in *PingRequest, opts ...grpc.CallOption) (TestService_PingListClient, error) {
-	stream, err := c.cc.NewStream(ctx, &TestService_ServiceDesc.Streams[0], "/mwitkow.testproto.TestService/PingList", opts...)
+	stream, err := c.cc.NewStream(ctx, &TestService_ServiceDesc.Streams[0], "/adamthesax.testproto.TestService/PingList", opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -94,7 +94,7 @@ func (x *testServicePingListClient) Recv() (*PingResponse, error) {
 }
 
 func (c *testServiceClient) PingStream(ctx context.Context, opts ...grpc.CallOption) (TestService_PingStreamClient, error) {
-	stream, err := c.cc.NewStream(ctx, &TestService_ServiceDesc.Streams[1], "/mwitkow.testproto.TestService/PingStream", opts...)
+	stream, err := c.cc.NewStream(ctx, &TestService_ServiceDesc.Streams[1], "/adamthesax.testproto.TestService/PingStream", opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -178,7 +178,7 @@ func _TestService_PingEmpty_Handler(srv interface{}, ctx context.Context, dec fu
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/mwitkow.testproto.TestService/PingEmpty",
+		FullMethod: "/adamthesax.testproto.TestService/PingEmpty",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(TestServiceServer).PingEmpty(ctx, req.(*emptypb.Empty))
@@ -196,7 +196,7 @@ func _TestService_Ping_Handler(srv interface{}, ctx context.Context, dec func(in
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/mwitkow.testproto.TestService/Ping",
+		FullMethod: "/adamthesax.testproto.TestService/Ping",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(TestServiceServer).Ping(ctx, req.(*PingRequest))
@@ -214,7 +214,7 @@ func _TestService_PingError_Handler(srv interface{}, ctx context.Context, dec fu
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/mwitkow.testproto.TestService/PingError",
+		FullMethod: "/adamthesax.testproto.TestService/PingError",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(TestServiceServer).PingError(ctx, req.(*PingRequest))
@@ -273,7 +273,7 @@ func (x *testServicePingStreamServer) Recv() (*PingRequest, error) {
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var TestService_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "mwitkow.testproto.TestService",
+	ServiceName: "adamthesax.testproto.TestService",
 	HandlerType: (*TestServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
