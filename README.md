@@ -1,8 +1,8 @@
 # gRPC Proxy
 
-[![Travis Build](https://travis-ci.org/adamthesax/grpc-proxy.svg?branch=master)](https://travis-ci.org/adamthesax/grpc-proxy)
-[![Go Report Card](https://goreportcard.com/badge/github.com/adamthesax/grpc-proxy)](https://goreportcard.com/report/github.com/adamthesax/grpc-proxy)
-[![Go Reference](https://pkg.go.dev/badge/github.com/adamthesax/grpc-proxy.svg)](https://pkg.go.dev/github.com/adamthesax/grpc-proxy)
+[![Travis Build](https://travis-ci.org/mwitkow/grpc-proxy.svg?branch=master)](https://travis-ci.org/mwitkow/grpc-proxy)
+[![Go Report Card](https://goreportcard.com/badge/github.com/mwitkow/grpc-proxy)](https://goreportcard.com/report/github.com/mwitkow/grpc-proxy)
+[![Go Reference](https://pkg.go.dev/badge/github.com/mwitkow/grpc-proxy.svg)](https://pkg.go.dev/github.com/mwitkow/grpc-proxy)
 [![Apache 2.0 License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
 
 [gRPC Go](https://github.com/grpc/grpc-go) Proxy server
@@ -76,10 +76,6 @@ against. To make debugging a bit simpler (eg. if the developer needs to step int
 passing `-test-backend=addr` to `go test`. A simple, local-only implementation of 
 `TestServiceServer` exists in [`testservice/server`](./testservice/server).
 
-## History
-
-This is a fork of [mwitkow/grpc-proxy](https://github.com/mwitkow/grpc-proxy) package with a 
-fix to handle repeated fields. This package may disappear if the upstream package fixes this issue.
 
 ## License
 

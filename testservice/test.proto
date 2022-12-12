@@ -1,8 +1,8 @@
 syntax = "proto3";
 
-package adamthesax.testproto;
+package mwitkow.testproto;
 
-option go_package="github.com/adamthesax/grpc-proxy/testservice";
+option go_package="github.com/mwitkow/grpc-proxy/testservice";
 
 import "google/protobuf/empty.proto";
 
